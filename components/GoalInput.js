@@ -16,7 +16,10 @@ const GoalInput = ({ onAddAction }) => {
         onChangeText={goalInputHandler}
         value={enteredGoal}
       />
-      <Button title="Add" onPress={() => onAddAction(enteredGoal)} />
+      <Button
+        title="Add"
+        onPress={() => onAddAction(enteredGoal, setEnteredGoal)}
+      />
     </View>
   )
 }
@@ -31,7 +34,9 @@ const styles = StyleSheet.create({
     width: '80%',
     borderColor: 'black',
     borderWidth: 1,
-    padding: 10
+    padding: 8,
+    paddingVertical: 4,
+    borderRadius: 4
   }
 })
 
